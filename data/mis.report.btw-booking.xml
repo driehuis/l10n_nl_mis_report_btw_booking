@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+	<record id="btw_boeking" model="mis.report">
+		<field name="name">BTW boeking</field>
+		<field name="style_id" search="[('name','=','PL/BS default')]" />
+		<field name="move_lines_source" search="[('name','=','Journal Item')]" />
+		<field name="account_model">account.account</field>
+		<field name="display_name">BTW boeking</field>
+	</record>
+	<record id="begindatum" model="mis.report.kpi">
+		<field name="name">begindatum</field>
+		<field name="description">Begindatum</field>
+		<field name="expression">date_from</field>
+		<field name="type">str</field>
+		<field name="compare_method">none</field>
+		<field name="accumulation_method">none</field>
+		<field name="sequence">100</field>
+		<field name="report_id" search="[('name','=','BTW boeking')]" />
+		<field name="display_name">Begindatum (begindatum)</field>
+	</record>
+	<record id="einddatum" model="mis.report.kpi">
+		<field name="name">einddatum</field>
+		<field name="description">Einddatum</field>
+		<field name="expression">date_to</field>
+		<field name="type">str</field>
+		<field name="compare_method">none</field>
+		<field name="accumulation_method">none</field>
+		<field name="sequence">101</field>
+		<field name="report_id" search="[('name','=','BTW boeking')]" />
+		<field name="display_name">Einddatum (einddatum)</field>
+	</record>
+	<record id="btw_bedragen" model="mis.report.kpi">
+		<field name="name">btw_bedragen</field>
+		<field name="description">Af te dragen (of te ontvangen)</field>
+		<field name="expression">bale[150%,151%,152%,153%,154%,157%,158%]</field>
+		<field name="auto_expand_accounts">True</field>
+		<field name="auto_expand_accounts_style_id" search="[('name','=','PL/BS default')]" />
+		<field name="type">num</field>
+		<field name="compare_method">diff</field>
+		<field name="accumulation_method">none</field>
+		<field name="sequence">102</field>
+		<field name="report_id" search="[('name','=','BTW boeking')]" />
+		<field name="display_name">Af te dragen (of te ontvangen) (btw_bedragen)</field>
+	</record>
+</odoo>
