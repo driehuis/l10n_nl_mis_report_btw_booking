@@ -1,12 +1,12 @@
-Dit is een Odoo 14 module wat een MIS Rapport template bevat, wat u
-kunt gebruiken om de BTW grootboeken van Odoo aan het eind van het jaar
-zodanig af te sluiten, dat:
+Dit is een Odoo 14 module wat een MIS Rapport template bevat, wat
+gebruikt kan worden om de BTW grootboeken van Odoo aan het eind van het
+jaar zodanig af te sluiten, dat:
 
-* Alle grootboeken met de verschillende BTW categoriën weer op nul gezet
+* Alle rekeningen met verschillende BTW categoriën weer op nul gezet
   worden.
 * De grootboekrekening 155000 bevat op 1 januari van het volgende jaar
-  alleen het bedrag wat u in de loop van januari nog over het afgesloten
-  boekjaar moet afdragen.
+  alleen het bedrag wat in de loop van januari nog over het afgesloten
+  boekjaar moet worden afdragen.
 
 Het bestand btw-boeking-template.ods wordt niet gebruikt door het Odoo module.
 Download het naar uw PC en gebruik Excel of libreOffice om een handmatige
